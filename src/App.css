@@ -1,0 +1,128 @@
+/* Establece variables para colores y tamaños */
+:root {
+  --main-bg-color: #f0f0f0;
+  --header-bg-color: #333;
+  --text-color: #fff;
+  --container-max-width: 1200px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --button-bg-whatsapp: #25d366;
+  --button-bg-whatsapp-hover: #128c7e;
+  --button-bg-instagram: #e4405f;
+  --button-bg-instagram-hover: #ca3951;
+  --icon-font-size: 32px;
+  --icon-top-adjustment: 2px;
+  --button-padding: 6px 12px;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para los productos */
+.product {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  max-width: 100%;
+  height: 400px; /* Ajusta la altura deseada */
+  object-fit: cover; /* Ajusta el comportamiento de relleno de la imagen */
+}
+
+.product-details {
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-details h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.product-details p {
+  font-size: 16px;
+  margin: 10px 0;
+  white-space: nowrap; /* Evita que el texto se desborde */
+  overflow: hidden; /* Oculta el contenido que se desborde del contenedor */
+  text-overflow: ellipsis; /* Muestra puntos suspensivos (...) para el texto truncado */
+}
+
+/* Estilos para los botones de WhatsApp e Instagram */
+.whatsapp-button,
+.instagram-button {
+  display: inline-block;
+  color: var(--text-color);
+  padding: var(--button-padding);
+  border-radius: 50%;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  outline: none;
+}
+
+.whatsapp-button {
+  background-color: var(--button-bg-whatsapp);
+}
+
+.whatsapp-button:hover {
+  background-color: var(--button-bg-whatsapp-hover);
+}
+
+.instagram-button {
+  background-color: var(--button-bg-instagram);
+}
+
+.instagram-button:hover {
+  background-color: var(--button-bg-instagram-hover);
+}
+
+/* Estilos para los íconos de WhatsApp e Instagram */
+.whatsapp-button i,
+.instagram-button i {
+  font-size: var(--icon-font-size);
+  color: var(--text-color);
+  position: relative;
+  top: var(--icon-top-adjustment);
+}
